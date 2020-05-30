@@ -1,0 +1,5 @@
+string = input('Enter an input string : ')
+print('The length of a your input is',len(string))
+n = int(input('Enter a number till which you want to remove, it should be greater than the length of your input : '))
+print('After removing')
+print(string[n:])
