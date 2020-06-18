@@ -1,0 +1,51 @@
+#Program for atm machine
+class Bank:
+	def __init__(self,name,acount_no,phone_no,address):
+		self.name = name
+		self.address = address
+		self.account_no = account_no
+		self.phone_no = phone_no
+		self.amount =  5000
+	#printing the details of the bank customer
+	def details(self):
+		print('Your name is '+self.name)
+		print('Your address is '+self.address)
+		print('Your account number is '+self.account_no)
+		print('Your phone number is '+self.phone_no)
+	#procesing the withdrawn ammount
+	def withdraw(self):
+		withdrawn= int(input('Enter the amount you want to withdraw: '))
+		self.amount = self.amount - withdrawn
+		print('The amount you withdraw is ',withdrawn)
+	#processing the deposit ammount
+	def deposit(self):
+		deposited = int(input('Enter the amount you want to deposit: '))
+		self.amount = self.amount + deposited
+		print('The amount you deposit is ',deposited)
+	#displaying the balance of the bank customer
+	def check_balance(self):
+		print('The total amount in your account is ',self.amount)
+name = input('Name : ')
+account_no = input('Account No : ')
+phone_no = input('Phone No : ')
+address = input('Address  : ')
+ban = Bank(name,account_no,phone_no,address)
+while True:	
+	print('choice :')
+	print('1.Check Balance')
+	print('2.Withdraw')
+	print('3.Deposit')
+	print('4.Check Details')
+	print('5.Exit')
+	choice = int(input('Enter the choice you want : '))
+	if choice == 1:
+		ban.check_balance()
+	elif choice == 2:
+		ban.withdraw()
+	elif choice == 3:
+		ban.deposit()
+	elif choice == 4:
+		ban.details()
+	else:
+		break
+print('Thankyou Have a Nice Day !!!')
