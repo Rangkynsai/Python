@@ -1,0 +1,35 @@
+class Restaurant:
+	def __init__(self,name,cusine_type):
+		self.name = name
+		self.cusine_type = cusine_type
+		self.number_serve = 0
+	def describe_restaurant(self):
+		print('The restaurant name is '+self.name)
+		print('It serve the '+self.cusine_type)
+	def status(self):
+		print('The restaurant is OPEN.')
+	def set_number_serve(self,customer):
+		self.number_serve = customer
+	def increment_number_serve(self):
+		self.number_serve +=1
+class User:
+	def __init__(self):
+		self.login_attempt = 0
+	def increment_login_attempt(self):
+		self.login_attempt +=1
+	def reset_login_attempt(self):
+		self.login_attempt = 0
+user = User()
+restaurant = Restaurant('Northeast Kitchen','Nort Eastern Food')
+print(restaurant.name)
+print(restaurant.cusine_type)
+restaurant.describe_restaurant()
+restaurant.status()
+restaurant.set_number_serve(15)
+for i in range(3):
+	restaurant.increment_number_serve()
+print('The number served is '+str(restaurant.number_serve)+" customer")
+user.increment_login_attempt()
+print("The number you have login is "+str(user.login_attempt))
+user.reset_login_attempt()
+print("The number you have login is "+str(user.login_attempt))
