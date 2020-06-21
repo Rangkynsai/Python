@@ -6,6 +6,7 @@ class Faculty:
 
 	
 	def show(self):
+		print()
 		print("------Faculty------")
 		print('Name : '+self.faculty_name)
 		print('Course Name : '+self.faculty_course)
@@ -19,12 +20,14 @@ class Student:
 		self.student_year = student_year
 	
 	def show(self):
+		print()
 		print("------Student------")
 		print('Name : '+self.student_name)
 		print('Semester : '+self.student_sem)
 		print('Year : '+self.student_year)
 		print("--------------------")
 	def course(self):
+		print()
 		print('-------Course-------')
 		print('1.',fac1.faculty_course,'-',fac1.faculty_name,'-',fac1.faculty_slot)
 		print('2.',fac2.faculty_course,'-',fac2.faculty_name,'-',fac2.faculty_slot)
@@ -49,6 +52,7 @@ if user_name == 'admin' and password == 'admin@123':
 	stu3 = Student('Lumlang Saio','8th','4th')
 	fac1 = Faculty('Vinoth Kumar','Cyber Security','S4')
 	fac2 = Faculty('Preema','Compiler Design','S1')
+	print()
 	print('Welcome '+user_name)
 	print('You can modify what ever you want.')
 	print('What you want to display ? ')
