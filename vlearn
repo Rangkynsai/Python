@@ -9,7 +9,7 @@ class Faculty:
 		print("------Faculty------")
 		print('Name : '+self.faculty_name)
 		print('Course Name : '+self.faculty_course)
-		print('Year : '+self.faculty_slot)
+		print('Slot : '+self.faculty_slot)
 		print("--------------------")
 
 class Student:
@@ -72,7 +72,7 @@ elif user_name == 'student' and password == 'student@123':
 	fac2 = Faculty('Preema','Compiler Design','S1')
 	stu1.show()
 	stu1.course()
-elif user_name == 'faculty' and password == 'facuty@123':
+elif user_name == 'faculty' and password == 'faculty@123':
 	fac1 = Faculty('Vinoth Kumar','Cyber Security','S4')
 	fac1.show()
 else:
