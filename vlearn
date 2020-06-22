@@ -31,6 +31,8 @@ class Student:
 		print('-------Course-------')
 		print('1.',fac1.faculty_course,'-',fac1.faculty_name,'-',fac1.faculty_slot)
 		print('2.',fac2.faculty_course,'-',fac2.faculty_name,'-',fac2.faculty_slot)
+		print('3.',fac3.faculty_course,'-',fac3.faculty_name,'-',fac3.faculty_slot)
+		print('4.',fac4.faculty_course,'-',fac4.faculty_name,'-',fac4.faculty_slot)
 		print('---------------------')
 
 class Administrator():
@@ -38,22 +40,29 @@ class Administrator():
 		stu1.show()
 		stu2.show()
 		stu3.show()
+		stu4.show()
 	def check_faculty_details(self):
 		fac1.show()
 		fac2.show()
+		fac3.show()
+		fac4.show()
 print('------LogIN-----')	
 user_name = input('Enter your username: ')
 password = input('Enter your password: ')
 print('----------------')
+print()
 if user_name == 'admin' and password == 'admin@123':
 	admin = Administrator()
 	stu1 = Student('Rangkynsai Saio','7th','4th')
 	stu2 = Student('Meba Ai Dahun Saio','3th','2th')
 	stu3 = Student('Lumlang Saio','8th','4th')
+	stu4 = Student('Francis','4th','2nd')
 	fac1 = Faculty('Vinoth Kumar','Cyber Security','S4')
 	fac2 = Faculty('Preema','Compiler Design','S1')
+	fac3 = Faculty('Vidya','Concrete Mathematics','S3')
+	fac4 = Faculty('Akila','DataStructure & Algorithm','S5')
 	print()
-	print('Welcome '+user_name)
+	print('Welcome '+user_name.title())
 	print('You can modify what ever you want.')
 	print('What you want to display ? ')
 	print('1.Student Details')
@@ -74,6 +83,8 @@ elif user_name == 'student' and password == 'student@123':
 	stu1 = Student('Rangkynsai Saio','7th','4th')
 	fac1 = Faculty('Vinoth Kumar','Cyber Security','S4')
 	fac2 = Faculty('Preema','Compiler Design','S1')
+	fac3 = Faculty('Vidya','Concrete Mathematics','S3')
+	fac4 = Faculty('Akila','DataStructure & Algorithm','S5')
 	stu1.show()
 	stu1.course()
 elif user_name == 'faculty' and password == 'faculty@123':
@@ -81,5 +92,5 @@ elif user_name == 'faculty' and password == 'faculty@123':
 	fac1.show()
 else:
 	print('Sorry Try again')
-
+print('Thank You!!')
 		
