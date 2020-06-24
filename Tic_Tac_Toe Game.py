@@ -20,21 +20,27 @@ def game_over(board,current_player):
 		print(current_player+" Won.")
 		
 	elif board[3] == "X" and board[4] == "X" and board[5] == "X" or (board[3] == "O" and board[4] == "O" and board[5] == "O"):
+		game_ove = False
 		print(current_player+" Won.")
 	elif board[6] == "X" and board[7] == "X" and board[8] == "X" or (board[6] == "O" and board[7] == "O" and board[8] == "O"):
+		game_ove = False
 		print(current_player+" Won.")
 	#col
 	elif board[0] == "X" and board[3] == "X" and board[5] == "X" or (board[0] == "O" and board[3] == "O" and board[6] == "O"):
-		print(current_player+" Won.")
 		game_ove = False
+		print(current_player+" Won.")
 	elif board[1] == "X" and board[4] == "X" and board[7] == "X" or (board[1] == "O" and board[4] == "O" and board[7] == "O"):
+		game_ove = False
 		print(current_player+" Won.")
 	elif board[2] == "X" and board[5] == "X" and board[8] == "X" or (board[2] == "O" and board[5] == "O" and board[8] == "O"):
+		game_ove = False
 		print(current_player+" Won.")
 	#diagonal
 	elif board[0] == "X" and board[4] == "X" and board[8] == "X" or (board[0] == "O" and board[4] == "O" and board[8] == "O"):
+		game_ove = False
 		print(current_player+" Won.")
 	elif board[2] == "X" and board[4] == "X" and board[6] == "X" or (board[2] == "O" and board[4] == "O" and board[6] == "O"):
+		game_ove = False
 		print(current_player+" Won.")
 
 #playing game
@@ -52,3 +58,5 @@ while game_ove:
 		current_player = "O"
 	else:
 		current_player = "X"
+	
+
