@@ -11,6 +11,12 @@ def display_board(board):
 	print()
 display_board(board)
 current_player = "X"
+#checking for a tie
+def tie_game(board):
+	global game_ove
+	if "-" not in board:
+		game_ove = False
+		print("It a tie!!")
 #checking for winner
 def game_over(board,current_player):
 	#row
@@ -47,16 +53,18 @@ def game_over(board,current_player):
 while game_ove:
 	print(current_player+" Turn.")
 	pos = (int(input("Choose a number from 1 to 9 : "))-1)
+	if "-" not in board[pos]:
+		print("you cannot go in the same position!!")
+		pos = (int(input("Choose a number from 1 to 9 : "))-1)
 	while pos not in [0,1,2,3,4,5,6,7,8]:
 		pos = int(input("Choose a number from 1 to 9 : "))
 	board[int(pos)] = current_player
 	display_board(board)
 	game_over(board,current_player)
+	tie_game(board)
 	if game_ove == False:
 		break
 	if current_player == "X":
 		current_player = "O"
 	else:
 		current_player = "X"
-	
-
